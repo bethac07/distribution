@@ -1,0 +1,47 @@
+install_name_tool -change \
+	@loader_path/libwx_osx_cocoau_xrc-3.0.dylib \
+	@loader_path/libwx_osx_cocoau_xrc-3.0.0.4.0.dylib \
+	dist/CellProfiler.app/Contents/MacOS/wx._core_.so
+
+install_name_tool -change \
+	@loader_path/libwx_osx_cocoau_webview-3.0.dylib \
+	@loader_path/libwx_osx_cocoau_webview-3.0.0.4.0.dylib \
+	dist/CellProfiler.app/Contents/MacOS/wx._core_.so
+
+install_name_tool -change \
+	@loader_path/libwx_osx_cocoau_html-3.0.dylib \
+	@loader_path/libwx_osx_cocoau_html-3.0.0.4.0.dylib \
+	dist/CellProfiler.app/Contents/MacOS/wx._core_.so
+
+install_name_tool -change \
+	@loader_path/libwx_osx_cocoau_qa-3.0.dylib \
+	@loader_path/libwx_osx_cocoau_qa-3.0.0.4.0.dylib \
+	dist/CellProfiler.app/Contents/MacOS/wx._core_.so
+
+install_name_tool -change \
+	@loader_path/libwx_osx_cocoau_adv-3.0.dylib \
+	@loader_path/libwx_osx_cocoau_adv-3.0.0.4.0.dylib \
+	dist/CellProfiler.app/Contents/MacOS/wx._core_.so
+
+install_name_tool -change \
+	@loader_path/libwx_osx_cocoau_core-3.0.dylib \
+	@loader_path/libwx_osx_cocoau_core-3.0.0.4.0.dylib \
+	dist/CellProfiler.app/Contents/MacOS/wx._core_.so
+
+install_name_tool -change \
+	@loader_path/libwx_baseu_xml-3.0.dylib \
+	@loader_path/libwx_baseu_xml-3.0.0.4.0.dylib \
+	dist/CellProfiler.app/Contents/MacOS/wx._core_.so
+
+install_name_tool -change \
+	@loader_path/libwx_baseu_net-3.0.dylib \
+	@loader_path/libwx_baseu_net-3.0.0.4.0.dylib \
+	dist/CellProfiler.app/Contents/MacOS/wx._core_.so
+
+install_name_tool -change \
+	@loader_path/libwx_baseu-3.0.dylib \
+	@loader_path/libwx_baseu-3.0.0.4.0.dylib \
+	dist/CellProfiler.app/Contents/MacOS/wx._core_.so
+
+
+
