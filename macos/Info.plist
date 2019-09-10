@@ -17,7 +17,7 @@
 	<key>CFBundleName</key>
 	<string>CellProfiler</string>
 	<key>CFBundleVersion</key>
-	<string>3.1.8</string>
+	<string>3.1.9</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>CFBundleDocumentTypes</key>

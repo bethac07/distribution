@@ -1,0 +1,7 @@
+brew cask install java11
+brew install jpeg libpng libtiff webp
+brew install wxmac bethac07/homebrew-core/wxpython
+
+brew uninstall wxpython wxmac
+brew cask uninstall java11
+brew uninstall --ignore-dependencies jpeg libpng libtiff webp
