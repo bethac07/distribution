@@ -32,6 +32,7 @@ hiddenimports += PyInstaller.utils.hooks.collect_submodules("wx")
 hiddenimports += PyInstaller.utils.hooks.collect_submodules('cellprofiler.gui')
 hiddenimports += PyInstaller.utils.hooks.collect_submodules('cellprofiler.modules')
 hiddenimports += PyInstaller.utils.hooks.collect_submodules('skimage.io._plugins')
+hiddenimports += PyInstaller.utils.hooks.collect_submodules('future')
 
 hiddenimports += [
     "pywt._extensions._cwt"
@@ -91,7 +92,7 @@ java_pathname = os.path.join(os.environ["JAVA_HOME"], "jre/lib/server/libjvm.dyl
 
 a.binaries += [
     ("libpng16.16.dylib", libpng_pathname, "BINARY"),
-    ("libjvm.dylib", java_pathname, "BINARY")
+    #("libjvm.dylib", java_pathname, "BINARY")
 ]
 
 exclude_binaries = [
@@ -123,7 +124,7 @@ exe = EXE(
     name="cp",
     debug=True,
     strip=False,
-    upx=True,
+    upx=False,
     console=True
 )
 
@@ -133,12 +134,14 @@ coll = COLLECT(
     a.zipfiles,
     a.datas,
     icon="./CellProfiler/cellprofiler/data/icons/CellProfiler.icns",
-    name="CellProfiler.app"
+    name="CellProfiler.app",
+    console=True
 )
 
 app = BUNDLE(
     coll,
     name="CellProfiler.app",
     icon="./CellProfiler/cellprofiler/data/icons/CellProfiler.icns",
-    bundle_identifier=None
+    bundle_identifier=None,
+    console=True
 )
